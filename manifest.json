@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "TubeTrim: YouTube Clean",
+  "name": "TubeTrim - Focus & Clean for YouTube™",
   "version": "0.2.0",
-  "description": "Distraction-free YouTube: Removes Shorts, hides topic chip bars, and opens Shorts in the standard player.",
+  "description": "Distraction-free YouTube: Removes Shorts, Playables, and opens Shorts in the standard player.",
   "permissions": [
     "storage"
   ],
