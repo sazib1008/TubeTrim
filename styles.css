@@ -1,0 +1,47 @@
+/* YouTube Clean / TubeTrim Stylesheet */
+
+/* Reversible hide classes applied dynamically by content.js */
+.yt-clean-hidden-shorts {
+  display: none !important;
+}
+
+.yt-clean-hidden-chips {
+  display: none !important;
+}
+
+.yt-clean-hidden-playables {
+  display: none !important;
+}
+
+/* 
+ * Instant structural rules triggered when data attributes are active on root.
+ * These ensure zero visual flash on initial load and client-side page transitions
+ * while preserving full reversibility when toggles are turned off.
+ */
+
+/* Topic chip bar hiding */
+html[data-yt-clean-chips="true"] ytd-feed-filter-chip-bar-renderer,
+html[data-yt-clean-chips="true"] #chips-wrapper.ytd-feed-filter-chip-bar-renderer,
+html[data-yt-clean-chips="true"] yt-chip-cloud-renderer.ytd-feed-filter-chip-bar-renderer {
+  display: none !important;
+}
+
+/* YouTube Playables hiding */
+html[data-yt-clean-playables="true"] ytd-rich-section-renderer:has(a[href*="/playables"]),
+html[data-yt-clean-playables="true"] ytd-rich-shelf-renderer:has(a[href*="/playables"]),
+html[data-yt-clean-playables="true"] ytd-shelf-renderer:has(a[href*="/playables"]),
+html[data-yt-clean-playables="true"] ytd-guide-entry-renderer:has(a[href*="/playables"]),
+html[data-yt-clean-playables="true"] ytd-mini-guide-entry-renderer:has(a[href*="/playables"]) {
+  display: none !important;
+}
+
+/* Shorts shelves and sidebar shelves hiding */
+html[data-yt-clean-shorts="true"] ytd-rich-shelf-renderer[is-shorts],
+html[data-yt-clean-shorts="true"] ytd-reel-shelf-renderer,
+html[data-yt-clean-shorts="true"] ytd-rich-section-renderer:has(ytd-rich-shelf-renderer[is-shorts]),
+html[data-yt-clean-shorts="true"] ytd-rich-section-renderer:has(ytd-reel-shelf-renderer),
+html[data-yt-clean-shorts="true"] ytd-watch-next-secondary-results-renderer ytd-reel-shelf-renderer,
+html[data-yt-clean-shorts="true"] ytd-guide-entry-renderer:has(a[title="Shorts"]),
+html[data-yt-clean-shorts="true"] ytd-mini-guide-entry-renderer:has(a[title="Shorts"]) {
+  display: none !important;
+}

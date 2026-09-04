@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TubeTrim: YouTube Clean</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="brand">
+        <img src="icons/icon48.png" alt="TubeTrim Logo" class="brand-icon">
+        <div class="brand-text">
+          <h1>TubeTrim</h1>
+          <span class="version-tag">v0.2</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Master Switch Section -->
+    <section class="card master-card">
+      <div class="setting-info">
+        <span class="setting-label">Enable YouTube Clean</span>
+        <span class="setting-desc" id="master-status-desc">All cleaning features active</span>
+      </div>
+      <label class="switch" for="toggle-enabled">
+        <input type="checkbox" id="toggle-enabled">
+        <span class="slider round"></span>
+      </label>
+    </section>
+
+    <!-- Sub-toggles Section -->
+    <section class="card sub-settings-card" id="sub-settings-container">
+      <div class="setting-item">
+        <div class="setting-info">
+          <span class="setting-label">Hide Shorts</span>
+          <span class="setting-desc">Feeds, shelves & sidebar</span>
+        </div>
+        <label class="switch" for="toggle-hide-shorts">
+          <input type="checkbox" id="toggle-hide-shorts">
+          <span class="slider round"></span>
+        </label>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="setting-item">
+        <div class="setting-info">
+          <span class="setting-label">Hide Playables</span>
+          <span class="setting-desc">Instant games shelf & sidebar</span>
+        </div>
+        <label class="switch" for="toggle-hide-playables">
+          <input type="checkbox" id="toggle-hide-playables">
+          <span class="slider round"></span>
+        </label>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="setting-item">
+        <div class="setting-info">
+          <span class="setting-label">Hide topic chips</span>
+          <span class="setting-desc">Top category filter bar</span>
+        </div>
+        <label class="switch" for="toggle-hide-chips">
+          <input type="checkbox" id="toggle-hide-chips">
+          <span class="slider round"></span>
+        </label>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="setting-item">
+        <div class="setting-info">
+          <span class="setting-label">Redirect Shorts links</span>
+          <span class="setting-desc">Open Shorts in standard player</span>
+        </div>
+        <label class="switch" for="toggle-redirect-shorts">
+          <input type="checkbox" id="toggle-redirect-shorts">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <span>Changes apply instantly &bull; Minimal permissions</span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
